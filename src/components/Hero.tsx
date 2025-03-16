@@ -65,12 +65,12 @@ const Hero = () => {
             >
               Book a Party
             </button>
-            <a 
-              href="#contact"
+            <button 
+              onClick={() => navigate('/visit')}
               className="px-6 py-3 bg-transparent border border-white text-white rounded-lg hover:bg-white/10 transition-all"
             >
               Visit Us
-            </a>
+            </button>
           </div>
         </div>
       </div>
