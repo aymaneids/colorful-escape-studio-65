@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        studio: {
+          orange: '#FF6B35',
+          black: '#222222',
+          teal: '#00A9A5',
+          yellow: '#F7CB15',
+          pink: '#FF90B3',
+          cream: '#FEF7ED',
+          offwhite: '#FFFAF5',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +94,46 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'fade-down': {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'pulse-soft': {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.8 },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in': 'fade-in 0.5s ease-out',
+        'fade-up': 'fade-up 0.8s ease-out',
+        'fade-down': 'fade-down 0.8s ease-out',
+        'pulse-soft': 'pulse-soft 4s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'spin-slow': 'spin-slow 12s linear infinite',
+			},
+      fontFamily: {
+        heading: ['Montserrat', 'sans-serif'],
+        body: ['Poppins', 'sans-serif'],
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
